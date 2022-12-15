@@ -72,9 +72,9 @@ if tickers_str != '':
     plt.title('Matrix de correlação')
 
     if eur_usd == 'EUR':
-        plot_1 = pl.ichart(data, title=title_1, yticksuffix='€', image='forum', yTitle='Valorização por cada 100 euros investidos')
+        plot_1 = pl.ichart(data, title=title_1, yticksuffix='€', yTitle='Valorização por cada 100 euros investidos')
     else:
-        plot_1 = pl.ichart(data, title=title_1, yticksuffix='$', image='forum', yTitle='Valorização por cada 100 dólares investidos')
+        plot_1 = pl.ichart(data, title=title_1, yticksuffix='$', yTitle='Valorização por cada 100 dólares investidos')
     
     plot_2 = pl.ichart(pl.compute_drawdowns(data), title=title_2, image='forum', yticksuffix='%')
     # plot_3 = pl.ichart(pl.compute_drawdowns(data), title=title_3, colors=['orange'])
