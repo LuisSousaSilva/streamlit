@@ -996,6 +996,14 @@ def ichart(data, title='', colors=colors_list, yTitle='', xTitle='', style='norm
             opacity= 1,
             layer= "below"
         )],
+
+        margin=go.layout.Margin(
+        l=50, #left margin
+        r=75, #right margin
+        b=50, #bottom margin
+        t=100  #top margin
+        ),
+
         annotations=[dict(
             xref="paper",
             yref="paper",
