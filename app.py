@@ -40,8 +40,8 @@ with st.sidebar:
     title_2 = st.text_input(label='Title 2')
 
     st.markdown('**Tamanho do heatmap de correlações**')
-    width = st.sidebar.slider("Largura", 3., 25., 5.00)
-    height = st.sidebar.slider("Altura", 0.5, 25., 4.00)
+    width = st.sidebar.slider("Largura", 3., 10.0, 5.50)
+    height = st.sidebar.slider("Altura", 0.5, 10.0, 4.00)
 
     eur_usd = st.radio(
     "EUR or USD?",
@@ -80,9 +80,13 @@ if tickers_str != '':
     # plot_3 = pl.ichart(pl.compute_drawdowns(data), title=title_3, colors=['orange'])
     # plot_4 = pl.ichart(data, title=title_4)
 
+    returns_table = pl.compute_performance_table(data)
+
     st.plotly_chart(plot_1, use_container_width=False)
 
     st.plotly_chart(plot_2, use_container_width=False)
+
+    st.dataframe(returns_table)
 
     buf = BytesIO()
     fig.savefig(buf, format="png")
