@@ -76,7 +76,7 @@ if tickers_str != '':
     else:
         plot_1 = pl.ichart(data, title=title_1, yticksuffix='$', yTitle='Valorização por cada 100 dólares investidos')
     
-    plot_2 = pl.ichart(pl.compute_drawdowns(data), title=title_2, image='forum', yticksuffix='%')
+    plot_2 = pl.ichart(pl.compute_drawdowns(data), title=title_2, yticksuffix='%')
     # plot_3 = pl.ichart(pl.compute_drawdowns(data), title=title_3, colors=['orange'])
     # plot_4 = pl.ichart(data, title=title_4)
 
